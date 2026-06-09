@@ -1,4 +1,5 @@
 brew "bash-language-server"
 brew "emmylua_ls"
 brew "shfmt"
+brew "tree-sitter-cli"
 brew "vscode-langservers-extracted"
