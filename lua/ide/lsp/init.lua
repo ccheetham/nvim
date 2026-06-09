@@ -1,11 +1,13 @@
-vim.pack.add({ {
-  src = github 'neovim/nvim-lspconfig',
-} })
+vim.pack.add({
+  {
+    src = github 'neovim/nvim-lspconfig'
+  }
+})
 
 vim.api.nvim_create_autocmd('LspAttach', {
-  callback = function(args)
+  callback = function (args)
     local bufnr = args.buf
-    local map = function(mode, lhs, rhs, desc)
+    local map = function (mode, lhs, rhs, desc)
       vim.keymap.set(mode, lhs, rhs, { buffer = bufnr, desc = desc })
     end
 
@@ -16,11 +18,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('n', 'gr', vim.lsp.buf.references, 'References')
     map('n', '<leader>rn', vim.lsp.buf.rename, 'Rename symbol')
     map({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, 'Code action')
-    map('n', '<leader>f', function()
+    map('n', '<leader>f', function ()
       vim.lsp.buf.format({ async = true })
-    end, 'Format buffer')
-  end,
+    end, 'Format buffer'
+    )
+  end
 })
 
+require(submod(..., 'json'))
 require(submod(..., 'lua'))
 require(submod(..., 'sh'))

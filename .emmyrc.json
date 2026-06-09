@@ -13,6 +13,8 @@
       "$VIMRUNTIME",
       "$LLS_Addons/luvit"
     ],
-    "ignoreGlobs": ["**/*_spec.lua"]
+    "ignoreGlobs": [
+      "**/*_spec.lua"
+    ]
   }
 }
