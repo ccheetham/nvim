@@ -17,8 +17,6 @@ vim.opt.confirm = true
 vim.opt.winborder = 'rounded'
 vim.opt.inccommand = 'split'
 
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.opt.wrap = false
@@ -31,10 +29,6 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.opt.undofile = true
-
-vim.schedule(function ()
-  vim.o.clipboard = 'unnamedplus'
-end)
 
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 600
