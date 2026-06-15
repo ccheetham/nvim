@@ -1,0 +1,10 @@
+brew "fd"
+brew "git"
+brew "lua-language-server"
+brew "rg"
+brew "tree-sitter-cli"
+
+cask "font-caskaydia-mono-nerd-font"
+cask "font-hack-nerd-font"
+cask "font-iosevka-term-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
