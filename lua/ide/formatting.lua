@@ -1,4 +1,3 @@
-vim.pack.add { GitRepo 'stevearc/conform.nvim' }
 require('conform').setup {
   notify_on_error = false,
   formatters = {},
@@ -17,7 +16,7 @@ require('conform').setup {
     else
       return nil
     end
-  end,
+  end
 }
 
 vim.keymap.set({ 'n', 'v' }, '<leader>f', function() require('conform').format { async = true } end, { desc = '[F]ormat buffer' })

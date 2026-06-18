@@ -1,5 +1,6 @@
 require(SubModule(..., 'pluginmgr'))
 require(SubModule(..., 'autopairs'))
+require(SubModule(..., 'conform'))
 require(SubModule(..., 'debug'))
 require(SubModule(..., 'gitsigns'))
 require(SubModule(..., 'guess-indent'))
