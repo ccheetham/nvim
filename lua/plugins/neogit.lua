@@ -1,0 +1,13 @@
+vim.pack.add {
+  GitRepo 'NeogitOrg/neogit',
+  GitRepo 'nvim-lua/plenary.nvim',
+  GitRepo 'sindrets/diffview.nvim',
+  GitRepo 'nvim-telescope/telescope.nvim',
+}
+
+local neogit = require 'neogit'
+neogit.setup {}
+
+vim.keymap.set('n', '<leader>vc', '<cmd>Neogit<cr>', { desc = '[v]ersion [c]ontrol' })
+vim.keymap.set('n', '<leader>vp', '<cmd>Neogit <cr>', { desc = '[v]ersion control [p]ull' })
+vim.keymap.set('n', '<leader>vP', '<cmd>Neogit <cr>', { desc = '[v]ersion control [P]ush' })
