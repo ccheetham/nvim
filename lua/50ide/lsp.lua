@@ -1,4 +1,3 @@
-vim.pack.add { GitRepo 'j-hui/fidget.nvim' }
 require('fidget').setup {}
 
 vim.api.nvim_create_autocmd('LspAttach', {

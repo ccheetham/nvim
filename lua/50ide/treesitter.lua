@@ -1,6 +1,4 @@
-vim.pack.add { { src = GitRepo 'nvim-treesitter/nvim-treesitter', version = 'main' } }
-
-local parsers = {
+require('nvim-treesitter').install {
   'bash',
   'c',
   'diff',
@@ -13,7 +11,6 @@ local parsers = {
   'vim',
   'vimdoc',
 }
-require('nvim-treesitter').install(parsers)
 
 ---@param buf integer
 ---@param language string

@@ -1,7 +1,5 @@
-vim.pack.add { { src = GitRepo 'L3MON4D3/LuaSnip', version = vim.version.range '2.*' } }
 require('luasnip').setup {}
 
-vim.pack.add { { src = GitRepo 'saghen/blink.cmp', version = vim.version.range '1.*' } }
 require('blink.cmp').setup {
   keymap = {
     -- 'default' (recommended) for mappings similar to built-in completions

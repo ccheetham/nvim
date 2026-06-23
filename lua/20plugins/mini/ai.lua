@@ -1,4 +1,3 @@
-vim.pack.add { GitRepo 'nvim-mini/mini.nvim' }
 require('mini.ai').setup {
   mappings = {
     around_next = 'aa',
