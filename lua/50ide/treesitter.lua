@@ -1,6 +1,3 @@
---  See `:help nvim-treesitter-intro`
-
--- NOTE: You can also specify a branch or a specific commit
 vim.pack.add { { src = GitRepo 'nvim-treesitter/nvim-treesitter', version = 'main' } }
 
 local parsers = {
