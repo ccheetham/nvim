@@ -31,5 +31,3 @@ for fname, ftype in vim.fs.dir(module_dir, { follow = true }) do
     end
   end
 end
-
--- vim: ts=2 sts=2 sw=2 et
