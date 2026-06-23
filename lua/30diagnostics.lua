@@ -4,9 +4,8 @@ vim.diagnostic.config {
   float = { border = 'rounded', source = 'if_many' },
   underline = { severity = { min = vim.diagnostic.severity.WARN } },
 
-  virtual_text = true,
-  virtual_lines = false,
-
+  virtual_text = not vim.g.diag_beneath_line,
+  virtual_lines = vim.g.diag_beneath_line,
   jump = {
     on_jump = function(_, bufnr)
       vim.diagnostic.open_float {
