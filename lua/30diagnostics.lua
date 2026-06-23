@@ -1,18 +1,22 @@
 vim.diagnostic.config {
-  update_in_insert = false,
-  severity_sort = true,
-  float = { border = 'rounded', source = 'if_many' },
-  underline = { severity = { min = vim.diagnostic.severity.WARN } },
-
   virtual_text = not vim.g.diag_beneath_line,
   virtual_lines = vim.g.diag_beneath_line,
-  jump = {
-    on_jump = function(_, bufnr)
-      vim.diagnostic.open_float {
-        bufnr = bufnr,
-        scope = 'cursor',
-        focus = false,
-      }
-    end,
-  },
+  signs = true,
+  update_in_insert = false,
+  severity_sort = true,
+  underline = true,
 }
+
+vim.api.nvim_create_autocmd('CursorHold', {
+  buffer = bufnr, ---@diagnostic disable-line: undefined-global
+  callback = function()
+    local opts = {
+      focusable = false,
+      close_events = { 'BufLeave', 'CursorMoved', 'InsertEnter', 'FocusLost' },
+      source = 'always',
+      prefix = ' ',
+      scope = 'cursor',
+    }
+    vim.diagnostic.open_float(nil, opts)
+  end,
+})
