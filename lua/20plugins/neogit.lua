@@ -1,6 +1,5 @@
 vim.pack.add {
   GitRepo 'NeogitOrg/neogit',
-  GitRepo 'nvim-lua/plenary.nvim',
   GitRepo 'sindrets/diffview.nvim',
   GitRepo 'nvim-telescope/telescope.nvim',
 }
