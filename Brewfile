@@ -2,6 +2,7 @@ brew "fd"
 brew "git"
 brew "lua-language-server"
 brew "rg"
+brew "shfmt"
 brew "tree-sitter-cli"
 
 cask "font-caskaydia-mono-nerd-font"
