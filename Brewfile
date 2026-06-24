@@ -1,3 +1,4 @@
+brew "clang-format"
 brew "fd"
 brew "git"
 brew "lua-language-server"
