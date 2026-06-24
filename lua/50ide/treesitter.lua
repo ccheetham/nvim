@@ -7,6 +7,7 @@ require('nvim-treesitter').install {
   'luadoc',
   'markdown',
   'markdown_inline',
+  'regex',
   'query',
   'vim',
   'vimdoc',
