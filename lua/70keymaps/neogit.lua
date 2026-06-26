@@ -1,3 +1,11 @@
-vim.keymap.set('n', '<leader>vc', '<cmd>Neogit<cr>', { desc = '[v]ersion [c]ontrol' })
-vim.keymap.set('n', '<leader>vp', '<cmd>Neogit <cr>', { desc = '[v]ersion control [p]ull' })
-vim.keymap.set('n', '<leader>vP', '<cmd>Neogit <cr>', { desc = '[v]ersion control [P]ush' })
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+local wk = require 'which-key'
+
+wk.add {
+  {
+    '<leader>vc',
+    '<cmd>Neogit<cr>',
+    desc = 'Neogit [V]ersion [C]ontrol',
+    mode = { 'n' },
+  },
+}
