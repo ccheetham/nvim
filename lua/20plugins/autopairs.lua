@@ -1,2 +1,2 @@
-vim.pack.add { 'https://github.com/windwp/nvim-autopairs' }
+vim.pack.add { GitRepo 'windwp/nvim-autopairs' }
 require('nvim-autopairs').setup {}
