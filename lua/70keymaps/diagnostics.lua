@@ -3,9 +3,9 @@ local wk = require 'which-key'
 
 wk.add {
   {
-    '<leader>q',
+    '<leader>x',
     vim.diagnostic.setloclist,
-    desc = 'Open diagnostic [Q]uickfix list',
+    desc = 'Open diagnosti[X] quickfix list',
     mode = { 'n' },
   },
 }
