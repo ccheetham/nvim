@@ -3,7 +3,7 @@ local wk = require 'which-key'
 wk.add {
   {
     '<leader>q',
-    '<cmd>quit<cr>',
+    '<cmd>quitall<cr>',
     desc = '[Q]uit Neovim',
     mode = { 'n' },
   },
