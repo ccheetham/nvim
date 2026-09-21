@@ -9,6 +9,7 @@ require('conform').setup {
     c = { 'clang-format' },
     cpp = { 'clang-format' },
     lua = { 'stylua' },
+    markdown = { 'prettier' },
     sh = { 'shfmt' },
     bash = { 'shfmt' },
     zsh = { 'shfmt' },
@@ -22,6 +23,7 @@ require('conform').setup {
       c = true,
       cpp = true,
       lua = true,
+      markdown = true,
       sh = true,
       zsh = true,
     }
