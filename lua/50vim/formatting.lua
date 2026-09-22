@@ -23,21 +23,8 @@ require('conform').setup {
   default_format_opts = {
     lsp_format = 'fallback',
   },
-  format_on_save = function(bufnr)
-    local enabled_filetypes = {
-      asciidoc = true,
-      bash = true,
-      c = true,
-      cpp = true,
-      lua = true,
-      markdown = true,
-      sh = true,
-      zsh = true,
-    }
-    if enabled_filetypes[vim.bo[bufnr].filetype] then
-      return { timeout_ms = 500 }
-    else
-      return nil
-    end
-  end,
+  format_on_save = {
+    timeout_ms = 500,
+    lsp_format = 'fallback',
+  },
 }
