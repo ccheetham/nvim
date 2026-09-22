@@ -1,13 +1,11 @@
 ---@type (string|vim.pack.Spec)[]
-local telescope_plugins = {
+local plugins = {
   GitRepo 'nvim-lua/plenary.nvim',
   GitRepo 'nvim-telescope/telescope.nvim',
   GitRepo 'nvim-telescope/telescope-ui-select.nvim',
+  GitRepo 'nvim-telescope/telescope-fzf-native.nvim',
 }
-
-if vim.fn.executable 'make' == 1 then table.insert(telescope_plugins, GitRepo 'nvim-telescope/telescope-fzf-native.nvim') end
-
-vim.pack.add(telescope_plugins)
+vim.pack.add(plugins)
 
 require('telescope').setup {
   extensions = {
