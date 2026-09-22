@@ -1,11 +1,17 @@
 require('conform').setup {
-  notify_on_error = false,
+  notify_on_error = true,
   formatters = {
+    adocfmt = {
+      command = 'adocfmt',
+      args = {},
+      stdin = true,
+    },
     shfmt = {
       prepend_args = { '-i', '2', '-ci', '-sr' },
     },
   },
   formatters_by_ft = {
+    asciidoc = { 'adocfmt' },
     c = { 'clang-format' },
     cpp = { 'clang-format' },
     lua = { 'stylua' },
@@ -19,6 +25,7 @@ require('conform').setup {
   },
   format_on_save = function(bufnr)
     local enabled_filetypes = {
+      asciidoc = true,
       bash = true,
       c = true,
       cpp = true,
