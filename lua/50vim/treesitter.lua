@@ -1,4 +1,21 @@
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'TSUpdate',
+  callback = function()
+    local parsers = require 'nvim-treesitter.parsers'
+    parsers.asciidoc = {
+      install_info = {
+        url = GitRepo 'cathaysia/tree-sitter-asciidoc',
+        files = { 'src/parser.c', 'src/scanner.c' },
+        revision = 'master',
+        location = 'tree-sitter-asciidoc',
+      },
+      filetype = 'asciidoc',
+    }
+  end,
+})
+
 require('nvim-treesitter').install {
+  'asciidoc',
   'bash',
   'c',
   'diff',
